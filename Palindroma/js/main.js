@@ -12,5 +12,17 @@ function reverseWord(word) {
     return reverseWord
 }
 
+// stampo la nuova parola
 const resultWord = reverseWord(userWord)
 console.log(resultWord);
+
+const resultElement = document.getElementById('result')
+
+// definisco se la parola è palindroma
+if (userWord == resultWord) {
+    console.log('La parola è palindroma');
+    resultElement.innerText = 'La parola è palindroma'
+} else {
+    console.log('La parola non è palindroma');
+    resultElement.innerText = 'La parola non è palindroma'
+}
