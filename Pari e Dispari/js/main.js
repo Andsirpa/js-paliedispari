@@ -17,7 +17,10 @@
 //                         - se la somma è pari e l'utente ha scelto pari o se la somma è dispari e l'utente ha scelto dispari dichiaro "Hai vinto"
 //                             - altrimenti dichiaro "Hai perso"
 
-// l'utente sceglie parino dispari
+
+const winResult = document.getElementById('win-or-lose')
+
+// l'utente sceglie pari o dispari
 const userChoice = document.getElementById('user-choice')
 const choice = userChoice.value
 console.log(choice);
@@ -30,5 +33,24 @@ console.log(userNumber);
 // genero un numero random per il computer
 const computerNumber = getRandomNumber(1, 5)
 console.log(computerNumber);
+
+// sommo i due numeri
+const result = userNumber + computerNumber
+console.log(result);
+
+if (result % 2 == 0 && choice == 'pari') {
+    console.log('Hai vinto!');
+    winResult.innerText = 'Hai vinto!'
+} else if (result % 2 != 0 && choice == 'dispari') {
+    console.log('Hai vinto!');
+    winResult.innerText = 'Hai vinto!'
+} else {
+    console.log('Hai perso!');
+    winResult.innerText = 'Hai perso!'
+}
+
+
+
+
 
 
